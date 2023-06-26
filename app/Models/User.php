@@ -27,6 +27,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+         'google_auth_code',
+        'github_auth_code',
     ];
 
     /**
@@ -35,10 +37,12 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $hidden = [
+        'google_auth_code',
         'password',
         'remember_token',
         'two_factor_recovery_codes',
         'two_factor_secret',
+
     ];
 
     /**
